@@ -23,7 +23,7 @@ The application supports the following types of user persona –
 
 The system comprises of a front end that works with a variety of devices. The front-end is powered by the microservices listed below.
 
-- Menu Service – This service allows users (managers) to perform CRUD operations on menu items. The data is stored in a persistent backend datastore and frequently accessed data along with user specific recommendations are cached in a caching data store. This microservice also updates the delivery partners to ensure data consistency.
+- Menu Service – This service allows users (managers) to perform CRUD operations on menu items & allows customers to view menu items to be added to the cart. The data is stored in a persistent backend datastore and frequently accessed data along with user specific recommendations are cached in a caching data store. This microservice also updates the delivery partners to ensure data consistency.
 - Cart Service – This service creates the cart entity which manages the customer&#39;s shopping cart. The cart is stored in a persistent store and is associated with a user. The menu items reference ids are added to a list along with their quantity. The implementation handles price lookup by calling the menu service to return the price to user.
 - Order Service – This service manages the order lifecycle and manages orders placed via all the different channels (direct customer, POS , external partners). This service also interfaces with other services such as inventory to update the inventory after an order is successfully fulfilled or cancelled, payment gateway to process the customer payment and logistics service to handle delivery
 - Inventory Service – This service is used to manage the restaurant inventory.
